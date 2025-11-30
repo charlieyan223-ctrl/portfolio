@@ -7,6 +7,9 @@ export default defineConfig(({ mode }) => {
     return {
       // Use '/portfolio/' for GitHub Pages, '/' for local development
       base: mode === 'production' ? '/portfolio/' : '/',
+      build: {
+        outDir: 'docs',
+      },
       server: {
         port: 3000,
         host: '0.0.0.0',
