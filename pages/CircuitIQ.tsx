@@ -42,69 +42,58 @@ const CircuitIQ: React.FC = () => {
             </ul>
           </FadeIn>
 
-          {/* Horizontal Flow Diagram */}
+          {/* Vertical Flow Diagram */}
           <FadeIn delay={200} className="w-full">
-            <div className="bg-gray-50 rounded-3xl p-8 w-full border border-gray-100 flex items-center justify-center">
+            <div className="bg-gray-50 rounded-3xl p-8 w-full border border-gray-100">
 
-              <div className="flex flex-col lg:flex-row items-center lg:items-start gap-3 w-full justify-center">
+              <div className="flex flex-col items-center gap-4">
 
                 {/* Step 1: Right Segments */}
-                <div className="group transition-all duration-300 ease-out">
-                  <div className="flex flex-col items-center gap-2">
-                    <div className="w-14 h-14 bg-white rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-200/60 flex items-center justify-center text-gray-900 transition-all duration-300 ease-out">
-                      <Users size={24} strokeWidth={1.5} />
-                    </div>
-                    <span className="text-xs font-semibold text-gray-900 tracking-tight text-center max-w-[80px] leading-tight">Right Segments</span>
+                <div className="flex items-center gap-4 w-full max-w-[280px]">
+                  <div className="w-14 h-14 bg-white rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-200/60 flex items-center justify-center text-gray-900 shrink-0">
+                    <Users size={24} strokeWidth={1.5} />
                   </div>
+                  <span className="text-sm font-semibold text-gray-900 tracking-tight">Right Segments</span>
                 </div>
 
-                <div className="flex justify-center lg:h-14 lg:items-center">
-                  <ArrowRight className="text-gray-300 rotate-90 lg:rotate-0 shrink-0" size={16} />
-                </div>
+                <div className="w-px h-4 bg-gray-200" />
 
                 {/* Step 2: Messaging */}
-                <div className="group transition-all duration-300 ease-out">
-                  <div className="flex flex-col items-center gap-2">
-                    <div className="w-14 h-14 bg-white rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-200/60 flex items-center justify-center text-gray-900 transition-all duration-300 ease-out">
-                      <MessageSquare size={24} strokeWidth={1.5} />
-                    </div>
-                    <span className="text-xs font-semibold text-gray-900 tracking-tight text-center max-w-[90px] leading-tight">Messaging & Channels</span>
+                <div className="flex items-center gap-4 w-full max-w-[280px]">
+                  <div className="w-14 h-14 bg-white rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-200/60 flex items-center justify-center text-gray-900 shrink-0">
+                    <MessageSquare size={24} strokeWidth={1.5} />
                   </div>
+                  <span className="text-sm font-semibold text-gray-900 tracking-tight">Messaging & Channels</span>
                 </div>
 
-                <div className="flex justify-center lg:h-14 lg:items-center">
-                  <ArrowRight className="text-gray-300 rotate-90 lg:rotate-0 shrink-0" size={16} />
-                </div>
+                <div className="w-px h-4 bg-gray-200" />
 
                 {/* Step 3: Funnel */}
-                <div className="group transition-all duration-300 ease-out">
-                  <div className="flex flex-col items-center gap-2">
-                    <div className="w-14 h-14 bg-white rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-200/60 flex items-center justify-center text-gray-900 transition-all duration-300 ease-out">
-                      <Filter size={24} strokeWidth={1.5} />
-                    </div>
-                    <span className="text-xs font-semibold text-gray-900 tracking-tight text-center max-w-[80px] leading-tight">Funnel</span>
+                <div className="flex items-center gap-4 w-full max-w-[280px]">
+                  <div className="w-14 h-14 bg-white rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-200/60 flex items-center justify-center text-gray-900 shrink-0">
+                    <Filter size={24} strokeWidth={1.5} />
                   </div>
+                  <span className="text-sm font-semibold text-gray-900 tracking-tight">Funnel</span>
                 </div>
 
-                <div className="flex justify-center lg:h-14 lg:items-center">
-                  <ArrowRight className="text-gray-300 rotate-90 lg:rotate-0 shrink-0" size={16} />
-                </div>
+                <div className="w-px h-4 bg-gray-200" />
 
-                {/* Outcomes */}
-                <div className="lg:h-14 lg:flex lg:items-center">
-                  <div className="px-5 py-2.5 bg-white rounded-full border border-gray-200/60 shadow-sm text-[10px] font-bold text-gray-900 tracking-wide uppercase text-center">
-                    Qualified Opportunities
+                {/* Step 4: Qualified Opportunities */}
+                <div className="flex items-center gap-4 w-full max-w-[280px]">
+                  <div className="w-14 h-14 bg-white rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-200/60 flex items-center justify-center text-gray-900 shrink-0">
+                    <Target size={24} strokeWidth={1.5} />
                   </div>
+                  <span className="text-sm font-semibold text-gray-900 tracking-tight">Qualified Opportunities</span>
                 </div>
 
-                <div className="flex justify-center lg:h-14 lg:items-center">
-                  <ArrowRight className="text-gray-300 rotate-90 lg:rotate-0 shrink-0" size={16} />
-                </div>
+                <div className="w-px h-4 bg-gray-200" />
 
-                <div className="lg:h-14 lg:flex lg:items-center">
-                  <div className="px-5 py-2.5 bg-white rounded-full border border-gray-200/60 shadow-sm text-[10px] font-bold text-gray-900 tracking-wide uppercase text-center">
-                    Revenue
+                {/* Step 5: Revenue */}
+                <div className="flex items-center gap-4 w-full max-w-[280px]">
+                  <div className="w-14 h-14 bg-white rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-200/60 flex items-center justify-center text-gray-900 shrink-0">
+                    <BarChart3 size={24} strokeWidth={1.5} />
                   </div>
+                  <span className="text-sm font-semibold text-gray-900 tracking-tight">Revenue</span>
                 </div>
 
               </div>
@@ -129,7 +118,7 @@ const CircuitIQ: React.FC = () => {
               { num: "3–5", label: "Flagship case studies across schools, LTC, and industry." }
             ].map((tile, i) => (
               <FadeIn key={i} delay={i * 100}>
-                <div className="bg-gray-900 p-8 rounded-2xl h-full flex flex-col justify-between hover:bg-gray-800 transition-colors duration-300">
+                <div className="bg-neutral-900 p-8 rounded-2xl h-full flex flex-col justify-between hover:bg-neutral-800 transition-colors duration-300">
                   <span className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">{tile.num}</span>
                   <span className="text-sm font-medium text-gray-400 leading-snug">{tile.label}</span>
                 </div>
@@ -193,7 +182,7 @@ const CircuitIQ: React.FC = () => {
                 <ul className="space-y-4">
                   {card.bullets.map((bullet, idx) => (
                     <li key={idx} className="text-sm text-gray-600 leading-relaxed flex gap-3">
-                      <div className="w-1 h-1 rounded-full bg-blue-600 mt-2.5 shrink-0" />
+                      <div className="w-1 h-1 rounded-full bg-black mt-2.5 shrink-0" />
                       {bullet}
                     </li>
                   ))}
