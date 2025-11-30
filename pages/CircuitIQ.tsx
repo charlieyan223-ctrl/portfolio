@@ -5,7 +5,7 @@ import FadeIn from '../components/FadeIn';
 const CircuitIQ: React.FC = () => {
   return (
     <div className="w-full pt-20 bg-white text-gray-900">
-      
+
       {/* SECTION 1 – HERO */}
       <section className="py-32 px-6 max-w-[1200px] mx-auto text-center border-b border-gray-100">
         <FadeIn>
@@ -35,7 +35,7 @@ const CircuitIQ: React.FC = () => {
                 "Measure success in qualified opportunities, not likes."
               ].map((item, i) => (
                 <li key={i} className="flex gap-4 items-start text-lg text-gray-600 leading-relaxed">
-                  <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-black shrink-0" />
+                  <div className="mt-3 w-1.5 h-1.5 rounded-full bg-black shrink-0" />
                   {item}
                 </li>
               ))}
@@ -45,54 +45,66 @@ const CircuitIQ: React.FC = () => {
           {/* Horizontal Flow Diagram */}
           <FadeIn delay={200} className="w-full">
             <div className="bg-gray-50 rounded-3xl p-8 w-full border border-gray-100 flex items-center justify-center">
-              
-              <div className="flex flex-col lg:flex-row items-center gap-3 w-full justify-center">
-                
+
+              <div className="flex flex-col lg:flex-row items-center lg:items-start gap-3 w-full justify-center">
+
                 {/* Step 1: Right Segments */}
                 <div className="group transition-all duration-300 ease-out">
                   <div className="flex flex-col items-center gap-2">
-                    <div className="w-14 h-14 bg-white rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-200/60 flex items-center justify-center text-gray-900 group-hover:scale-110 group-hover:shadow-md group-hover:border-gray-300 transition-all duration-300 ease-out">
+                    <div className="w-14 h-14 bg-white rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-200/60 flex items-center justify-center text-gray-900 transition-all duration-300 ease-out">
                       <Users size={24} strokeWidth={1.5} />
                     </div>
                     <span className="text-xs font-semibold text-gray-900 tracking-tight text-center max-w-[80px] leading-tight">Right Segments</span>
                   </div>
                 </div>
 
-                <ArrowRight className="text-gray-300 rotate-90 lg:rotate-0 shrink-0" size={16} />
+                <div className="flex justify-center lg:h-14 lg:items-center">
+                  <ArrowRight className="text-gray-300 rotate-90 lg:rotate-0 shrink-0" size={16} />
+                </div>
 
                 {/* Step 2: Messaging */}
                 <div className="group transition-all duration-300 ease-out">
                   <div className="flex flex-col items-center gap-2">
-                    <div className="w-14 h-14 bg-white rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-200/60 flex items-center justify-center text-gray-900 group-hover:scale-110 group-hover:shadow-md group-hover:border-gray-300 transition-all duration-300 ease-out">
+                    <div className="w-14 h-14 bg-white rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-200/60 flex items-center justify-center text-gray-900 transition-all duration-300 ease-out">
                       <MessageSquare size={24} strokeWidth={1.5} />
                     </div>
                     <span className="text-xs font-semibold text-gray-900 tracking-tight text-center max-w-[90px] leading-tight">Messaging & Channels</span>
                   </div>
                 </div>
 
-                <ArrowRight className="text-gray-300 rotate-90 lg:rotate-0 shrink-0" size={16} />
+                <div className="flex justify-center lg:h-14 lg:items-center">
+                  <ArrowRight className="text-gray-300 rotate-90 lg:rotate-0 shrink-0" size={16} />
+                </div>
 
                 {/* Step 3: Funnel */}
                 <div className="group transition-all duration-300 ease-out">
                   <div className="flex flex-col items-center gap-2">
-                    <div className="w-14 h-14 bg-white rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-200/60 flex items-center justify-center text-gray-900 group-hover:scale-110 group-hover:shadow-md group-hover:border-gray-300 transition-all duration-300 ease-out">
+                    <div className="w-14 h-14 bg-white rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-200/60 flex items-center justify-center text-gray-900 transition-all duration-300 ease-out">
                       <Filter size={24} strokeWidth={1.5} />
                     </div>
                     <span className="text-xs font-semibold text-gray-900 tracking-tight text-center max-w-[80px] leading-tight">Funnel</span>
                   </div>
                 </div>
 
-                <ArrowRight className="text-gray-300 rotate-90 lg:rotate-0 shrink-0" size={16} />
-
-                {/* Outcomes */}
-                <div className="px-5 py-2.5 bg-white rounded-full border border-gray-200/60 shadow-sm text-[10px] font-bold text-gray-900 tracking-wide uppercase text-center">
-                  Qualified Opportunities
+                <div className="flex justify-center lg:h-14 lg:items-center">
+                  <ArrowRight className="text-gray-300 rotate-90 lg:rotate-0 shrink-0" size={16} />
                 </div>
 
-                <ArrowRight className="text-gray-300 rotate-90 lg:rotate-0 shrink-0" size={16} />
+                {/* Outcomes */}
+                <div className="lg:h-14 lg:flex lg:items-center">
+                  <div className="px-5 py-2.5 bg-white rounded-full border border-gray-200/60 shadow-sm text-[10px] font-bold text-gray-900 tracking-wide uppercase text-center">
+                    Qualified Opportunities
+                  </div>
+                </div>
 
-                <div className="px-5 py-2.5 bg-white rounded-full border border-gray-200/60 shadow-sm text-[10px] font-bold text-gray-900 tracking-wide uppercase text-center">
-                  Revenue
+                <div className="flex justify-center lg:h-14 lg:items-center">
+                  <ArrowRight className="text-gray-300 rotate-90 lg:rotate-0 shrink-0" size={16} />
+                </div>
+
+                <div className="lg:h-14 lg:flex lg:items-center">
+                  <div className="px-5 py-2.5 bg-white rounded-full border border-gray-200/60 shadow-sm text-[10px] font-bold text-gray-900 tracking-wide uppercase text-center">
+                    Revenue
+                  </div>
                 </div>
 
               </div>
@@ -101,41 +113,43 @@ const CircuitIQ: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 3 – TARGET OUTCOMES */}
-      <section className="py-24 px-6 max-w-[1200px] mx-auto border-b border-gray-100">
-        <FadeIn className="mb-12 text-center md:text-left">
-          <h2 className="text-3xl font-bold tracking-tight mb-2">What I Aim to Deliver</h2>
-          <p className="text-xl text-gray-500 font-light">Targets for the first 12 months.</p>
-        </FadeIn>
+      {/* SECTION 3 – TARGET OUTCOMES (DARK THEME) */}
+      <section className="py-24 px-6 bg-black text-white border-b border-gray-800">
+        <div className="max-w-[1200px] mx-auto">
+          <FadeIn className="mb-12 text-center md:text-left">
+            <h2 className="text-3xl font-bold tracking-tight mb-2 text-white">What I Aim to Deliver</h2>
+            <p className="text-xl text-gray-400 font-light">Targets for the first 12 months.</p>
+          </FadeIn>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-          {[
-            { num: "20–30", label: "Marketing-sourced qualified opportunities / year." },
-            { num: "2–5", label: "New paying customers or major projects." },
-            { num: "2k–2.5k", label: "LinkedIn followers (from ~1k today)." },
-            { num: "3–5", label: "Flagship case studies across schools, LTC, and industry." }
-          ].map((tile, i) => (
-            <FadeIn key={i} delay={i * 100}>
-              <div className="bg-gray-50 p-8 rounded-2xl h-full flex flex-col justify-between hover:bg-gray-100 transition-colors duration-300">
-                <span className="text-4xl md:text-5xl font-bold text-black tracking-tight mb-4">{tile.num}</span>
-                <span className="text-sm font-medium text-gray-500 leading-snug">{tile.label}</span>
-              </div>
-            </FadeIn>
-          ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            {[
+              { num: "20–30", label: "Marketing-sourced qualified opportunities / year." },
+              { num: "2–5", label: "New paying customers or major projects." },
+              { num: "2k–2.5k", label: "LinkedIn followers (from ~1k today)." },
+              { num: "3–5", label: "Flagship case studies across schools, LTC, and industry." }
+            ].map((tile, i) => (
+              <FadeIn key={i} delay={i * 100}>
+                <div className="bg-gray-900 p-8 rounded-2xl h-full flex flex-col justify-between hover:bg-gray-800 transition-colors duration-300">
+                  <span className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">{tile.num}</span>
+                  <span className="text-sm font-medium text-gray-400 leading-snug">{tile.label}</span>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn delay={400} className="text-center">
+            <p className="text-gray-500 text-sm font-medium">
+              The goal: a repeatable engine that feeds pipeline and makes every sales conversation easier.
+            </p>
+          </FadeIn>
         </div>
-
-        <FadeIn delay={400} className="text-center">
-          <p className="text-gray-400 text-sm font-medium">
-            The goal: a repeatable engine that feeds pipeline and makes every sales conversation easier.
-          </p>
-        </FadeIn>
       </section>
 
       {/* SECTION 4 – FUNNEL + THREE PILLARS */}
       <section className="py-24 px-6 max-w-[1200px] mx-auto border-b border-gray-100">
         <FadeIn className="mb-16 text-center">
           <h2 className="text-3xl font-bold tracking-tight mb-12">How I’d Build the Engine</h2>
-          
+
           {/* Funnel Visual */}
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-16 max-w-3xl mx-auto">
             <div className="flex-1 py-4 w-full bg-gray-50 rounded-xl text-gray-900 font-bold tracking-tight">Awareness</div>
@@ -179,7 +193,7 @@ const CircuitIQ: React.FC = () => {
                 <ul className="space-y-4">
                   {card.bullets.map((bullet, idx) => (
                     <li key={idx} className="text-sm text-gray-600 leading-relaxed flex gap-3">
-                      <div className="w-1 h-1 rounded-full bg-blue-600 mt-2 shrink-0" />
+                      <div className="w-1 h-1 rounded-full bg-blue-600 mt-2.5 shrink-0" />
                       {bullet}
                     </li>
                   ))}
@@ -251,7 +265,7 @@ const CircuitIQ: React.FC = () => {
           <p className="text-xl text-gray-500 font-light mb-12">
             I don’t just create content. I build measurable growth engines.
           </p>
-          
+
           <div className="flex flex-col gap-6 text-left max-w-md mx-auto mb-12">
             {[
               "Put CircuitIQ in front of the right decision-makers.",

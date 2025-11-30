@@ -68,7 +68,6 @@ const STRATEGY_PROJECTS = [
       'Built recommendation roadmap',
       'Award-winning user-impact project'
     ],
-
     goinAppImage, // Mobile App/Tech
     {
       role: "Student Ambassador — Humber International Centre",
@@ -473,9 +472,11 @@ const Portfolio: React.FC = () => {
             {CAMPAIGN_PROJECTS.map((project, i) => (
               <FadeIn key={project.id} delay={i * 100}>
                 <div className="group cursor-pointer" onClick={() => handleOpenModal(project)}>
+                  {/* Thumbnail */}
                   <div className="aspect-video bg-gray-50 rounded-2xl overflow-hidden mb-8 shadow-[0_8px_24px_-4px_rgba(0,0,0,0.06)] transition-all duration-500 ease-out group-hover:shadow-[0_35px_70px_-12px_rgba(0,0,0,0.15)] group-hover:-translate-y-2 will-change-transform">
                     <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
                   </div>
+                  {/* Content */}
                   <div>
                     <h3 className="text-xl font-semibold tracking-tight mb-3 group-hover:text-black transition-colors">{project.title}</h3>
                     <p className="text-gray-600 leading-relaxed mb-6 line-clamp-2">{project.summary}</p>

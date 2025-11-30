@@ -49,23 +49,23 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
   const handleClose = () => {
     setIsVisible(false);
-    setTimeout(onClose, 600); // Wait for animation to finish
+    setTimeout(onClose, 300); // Wait for animation to finish
   };
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 sm:p-6">
       {/* Backdrop */}
-      <div 
-        className={`absolute inset-0 bg-gray-900/40 backdrop-blur-md transition-opacity duration-500 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+      <div
+        className={`absolute inset-0 bg-gray-900/40 backdrop-blur-md transition-opacity duration-300 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
         onClick={handleClose}
       />
 
       {/* Modal Content */}
-      <div 
-        className={`bg-white w-full max-w-4xl max-h-[100vh] sm:max-h-[90vh] overflow-y-auto sm:rounded-3xl shadow-2xl relative z-10 transform transition-all duration-700 cubic-bezier(0.2, 0.8, 0.2, 1) will-change-transform ${isVisible ? 'scale-100 opacity-100 translate-y-0' : 'scale-95 opacity-0 translate-y-8'}`}
+      <div
+        className={`bg-white w-full max-w-4xl max-h-[100vh] sm:max-h-[90vh] overflow-y-auto sm:rounded-3xl shadow-2xl relative z-10 transform transition-all duration-300 cubic-bezier(0.2, 0.8, 0.2, 1) will-change-transform ${isVisible ? 'scale-100 opacity-100 translate-y-0' : 'scale-95 opacity-0 translate-y-8'}`}
       >
         {/* Close Button */}
-        <button 
+        <button
           onClick={handleClose}
           className="fixed sm:absolute top-6 right-6 z-50 w-10 h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-gray-100 text-gray-900 transition-colors shadow-sm border border-gray-200 group"
         >
@@ -74,25 +74,25 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
         {/* Hero Image */}
         <div className="relative h-64 sm:h-[450px] w-full overflow-hidden">
-          <img 
-            src={project.image} 
-            alt={project.title} 
+          <img
+            src={project.image}
+            alt={project.title}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           <div className="absolute bottom-0 left-0 p-8 sm:p-12 text-white max-w-3xl">
-             <div className="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold tracking-wide uppercase mb-4 border border-white/30">
-               {project.category}
-             </div>
-             <h1 className="text-3xl sm:text-5xl font-bold tracking-tight">{project.title}</h1>
+            <div className="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold tracking-wide uppercase mb-4 border border-white/30">
+              {project.category}
+            </div>
+            <h1 className="text-3xl sm:text-5xl font-bold tracking-tight">{project.title}</h1>
           </div>
         </div>
 
         {/* Content Body - Apple Style Structure */}
-        <div className="px-8 py-12 sm:p-16 max-w-3xl mx-auto">
-          
-          <div className={`space-y-16 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            
+        <div className="px-8 py-12 sm:p-10 max-w-3xl mx-auto">
+
+          <div className={`space-y-8 transition-all duration-300 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+
             {/* ROLE & HEADLINE */}
             <div>
               <h3 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">Role: {project.details.role}</h3>
@@ -152,12 +152,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
           </div>
 
           <div className="mt-20 pt-8 border-t border-gray-100 flex justify-center">
-             <button 
+            <button
               onClick={handleClose}
               className="group text-sm font-medium text-gray-900 hover:text-gray-600 flex items-center gap-2 transition-colors px-8 py-4 rounded-full bg-gray-50 hover:bg-gray-100"
-             >
-               Close Case Study <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-             </button>
+            >
+              Close Case Study <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </button>
           </div>
         </div>
       </div>

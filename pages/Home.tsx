@@ -251,7 +251,7 @@ const Home: React.FC = () => {
 
       {/* SECTION 5 — IN THE WORK (CAROUSEL) */}
       <section className="py-32 px-6 bg-white overflow-hidden relative z-10">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[900px] mx-auto">
           {/* Section Header */}
           <FadeIn className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-black mb-4">In the Work. In the Community.</h2>
@@ -268,7 +268,7 @@ const Home: React.FC = () => {
               onMouseLeave={() => setIsPaused(false)}
             >
               {/* Slides Track */}
-              <div className="relative overflow-hidden rounded-[2rem] aspect-[4/3] md:aspect-[16/9] shadow-sm">
+              <div className="relative overflow-hidden rounded-[2rem] aspect-[4/3] md:aspect-[3/2] shadow-sm">
                 <div
                   className="flex transition-transform duration-700 ease-in-out h-full"
                   style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -276,7 +276,7 @@ const Home: React.FC = () => {
                   {CAROUSEL_SLIDES.map((slide, index) => (
                     <div
                       key={slide.id}
-                      className="min-w-full h-full relative cursor-pointer group/slide"
+                      className="min-w-full h-full relative group/slide"
                     >
                       {/* Blurred Background for Ambience */}
                       <div className="absolute inset-0 z-0 overflow-hidden bg-gray-900">

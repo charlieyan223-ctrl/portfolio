@@ -123,7 +123,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 email="charlieyan223@gmail.com"
                 className="text-sm text-gray-900 hover:text-gray-600 flex items-center gap-2 transition-colors"
               >
-                charlieyan223@gmail.com <ArrowRight size={14} />
+                Email <ArrowRight size={14} />
               </EmailCopy>
               <a href="https://www.linkedin.com/in/charlieyan0203" target="_blank" rel="noreferrer" className="text-sm text-gray-900 hover:text-gray-600 flex items-center gap-2 transition-colors">
                 LinkedIn <ArrowRight size={14} />
